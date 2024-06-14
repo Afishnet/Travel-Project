@@ -103,11 +103,10 @@ section {
   grid-gap: 20px;
   justify-content: center;
 }
-.paragraph p {
-  margin-bottom: 100px;
-}
+
 .paragraph .img-container {
   margin-bottom: 100px;
+  margin-top: 100px;
 }
 .cards {
   margin: 20px 20px 20px 20px;
@@ -117,7 +116,7 @@ section {
   border-radius: 1%;
   display: flex;
   flex-direction: column;
-  justify-content: space-evenly;
+  justify-content: center;
 }
 .card h3 {
   text-align: center;
@@ -125,9 +124,9 @@ section {
 }
 
 .text-card {
-  margin-left: 30px;
-  margin-right: 20px;
   flex-grow: 1;
+  margin-left: 20px;
+  margin-right: 20px;
 }
 .text-card p {
   font-size: 14px;
@@ -135,11 +134,14 @@ section {
 .img-container {
   display: flex;
   justify-content: space-evenly;
+  margin-left: 10px;
+  margin-right: 10px;
+  overflow-x: hidden;
 }
 .img-card {
   flex: 1;
   object-fit: cover;
-  margin: 0 5px;
+  margin: 10px 10px 10px 10px;
 }
 .maps {
   margin: 10px 15px 10px 15px;
@@ -156,11 +158,39 @@ section {
   padding: 16px;
   background-color: var(--highlight-color);
   text-decoration: none;
+  transition: 70ms;
+}
+.btn:hover {
+  background-color: #834444;
 }
 .card-footer {
   padding: 0 150px;
   margin-top: 50px;
   margin-bottom: 20px;
+}
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+td {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 17px;
+  line-height: 1.5;
+  opacity: 0.7;
+  letter-spacing: 0.3px;
+}
+th,
+td {
+  border: 1px solid var(--body-color);
+  padding: 8px;
+  text-align: center;
+}
+
+th {
+  background-color: var(--body-color);
+  font-weight: 500;
 }
 main h2 {
   font-family: var(--primary-font);
@@ -169,6 +199,7 @@ main h2 {
   line-height: 1.5;
   margin: 0;
   text-align: center;
+  margin-bottom: 20px;
 }
 main p {
   font-style: normal;
@@ -176,12 +207,34 @@ main p {
   font-size: 17px;
   line-height: 1.5;
   opacity: 0.7;
+  letter-spacing: 0.3px;
+  margin-bottom: 30px;
 }
-
+main h4 {
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 1.5;
+  margin: 0;
+  margin-bottom: 10px;
+}
+main h5 {
+  font-weight: 500;
+  font-size: 15px;
+  line-height: 1.5;
+  margin: 0;
+  margin-bottom: 10px;
+}
+.img-food {
+  filter: opacity(90%);
+  border-radius: 1%;
+}
 .secondary {
   background-color: #f2ebe6;
-  margin: 30px 10px 30px 10px;
-  padding: 10px 20px 10px 20px;
+  margin: 0px 20px 30px 20px;
+  padding: 20px 20px 10px 20px;
+}
+.primary {
+  margin-bottom: 0;
 }
 footer {
   background-color: #d1b9a3;
@@ -218,34 +271,74 @@ i {
   padding: 5px 5px 5px 5px;
 }
 i:hover {
-  color: #a15555;
+  color: #834444;
 }
-@media (max-width: 900px) {
+@media (max-width: 960px) {
   header {
-    padding: 60px 0;
+    padding: 40px 0;
   }
 
   header h1 {
-    font-size: 48px;
+    font-size: 36px;
   }
 
   header h2 {
-    font-size: 20px;
+    font-size: 18px;
   }
 
   header h3 {
+    font-size: 14px;
+  }
+
+  section {
+    padding: 20px;
+  }
+
+  .img-card {
+    max-width: 100%;
+    margin: 10px auto;
+  }
+
+  .text-card {
+    margin-left: 20px;
+  }
+  .text-card p {
     font-size: 12px;
   }
-  .grid {
+  .card-footer {
+    padding: 0 20px;
+    margin-top: 30px;
+    margin-bottom: 10px;
+  }
+  .grid-2-columns,
+  .grid-3-columns {
     grid-template-columns: 1fr;
-    grid-gap: 32px;
+  }
+  .embed-responsive {
+    aspect-ratio: 16 / 9;
   }
   .img-container {
     display: grid;
     grid-template-columns: 1fr;
-    grid-gap: 32px;
   }
-  section {
-    padding: 30px;
-  }
+}
+footer {
+  padding: 20px;
+}
+
+footer h3 {
+  font-size: 18px;
+}
+
+footer p {
+  font-size: 14px;
+  line-height: 20px;
+}
+
+footer ul {
+  margin-top: 10px;
+}
+
+footer li {
+  padding: 3px 0;
 }
