@@ -288,6 +288,19 @@ span {
 .box {
   margin-top: 40px;
 }
+.end .box {
+  margin-bottom: 40px;
+}
+.end a {
+  color: var(--highlight-color);
+  text-decoration: none;
+}
+.video {
+  margin: 20px 20px 20px 20px;
+  padding: 10px 10px 10px 10px;
+
+  border: double #d1b9a3;
+}
 footer {
   background-color: #d1b9a3;
   color: #690909;
